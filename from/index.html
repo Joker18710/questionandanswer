@@ -7,40 +7,56 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="form">
+    <div id="container">
       <div class="content-form">
         <label class="corb">c or b</label>
-        <input id="radiobutton-company" type="radio" value="company" name="content" onClick="companyflg(this.checked);"><label>法人</label>
-        <input id="radiobutton-custmer" type="radio" value="custmer" name="content" onClick="custmerflg(this.checked);"><label>個人</label>
+      </div>
+      <div id="radiobutton">
+        <input type="radio" value="company" name="content" onClick="companyflg(this.checked);"><label>法人</label>
+        <input type="radio" value="custmer" name="content" onClick="custmerflg(this.checked);"><label>個人</label>
       </div>
       <div>
         <label class="content">会社名</label>
-        <input type="text" name="company" placeholder="入力してください" id="campanyname" disabled="disabled">
+      </div>
+      <div>
+        <input type="text" name="company" placeholder="入力してください" id="companyname" disabled="disabled">
       </div>
       <div>
         <label class="content">氏名</label>
-        <input type="text" name="name" placeholder="入力してください"  class="name">    
+      </div>
+      <div>
+        <input type="text" name="name" placeholder="入力してください"  id="inputForm">    
       </div>
       <div>
         <label class="gender">性別</label>
+      </div>
+      <div>
         <input class="radiobutton" type="radio" value="man" name="trigger" checked><label>男性</label>
         <input class="radiobutton" type="radio" value="woman" name="trigger" checked><label>女性</label>
         <input class="radiobutton" type="radio" value="else" name="trigger" checked><label>その他</label>
       </div>
       <div>
         <label class="content">生年月日</label>
-        <input type="text" name="year" placeholder="yyyy/mm/dd">
+      </div>
+      <div>
+        <input type="text" name="year" placeholder="yyyy/mm/dd" id="years">
       </div>
       <div>
         <label class="content">メールアドレス</label>
-        <input type="text" name="email" placeholder="入力してください" class="name">
+      </div>
+      <div>
+        <input type="text" name="email" placeholder="入力してください" class="name" id="eadress">
       </div>
       <div>
         <label class="content">郵便番号</label>
-        <input type="text" name="postcode" placeholder="入力してください" class="name">
+      </div>
+      <div>
+        <input type="text" name="postcode" placeholder="入力してください" class="name" id="postCode">
       </div>
       <div>
         <label class="content">都道府県</label>
+      </div>
+      <div>
         <select name="pref">
           <option value="" selected>都道府県</option>
           <option value="1">北海道</option>
@@ -97,7 +113,7 @@
          <label class="content">住所</label>
        </div>
        <div>
-         <input type="text" name="adress" placeholder="入力してください" class="name">
+         <input type="text" name="adress" placeholder="入力してください" id="Adress">
        </div>
       </div>
       <div>
@@ -105,11 +121,14 @@
         <label class="content">お問合せ内容</label>
        </div>
        <div>
-        <textarea class="contact-textarea" name="form" placeholder="ご自由にお書きください"></textarea>      
+        <textarea class="contact-textarea" name="form" placeholder="ご自由にお書きください" id="ask"></textarea>      
        </div>
       </div>
       <div>
-        <input class="contact" type="button" value="一時保存" id="btn">
+        <button id="saveBtn">保存</button>
+      </div>
+      <div>
+        <button id="backBtn">入力内容</button>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
